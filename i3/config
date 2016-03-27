@@ -8,7 +8,6 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-exec gnome-setings-daemon
 set $mod Mod1
 
 # font for window titles. ISO 10646 = Unicode
@@ -26,6 +25,7 @@ bindsym $mod+Escape kill
 # start dmenu (a program launcher)
 bindsym $mod+space exec dmenu_run
 bindsym $mod+z exec firefox
+bindsym $mod+Control+l exec i3lock
 
 # change focus
 bindsym $mod+j focus left
@@ -139,3 +139,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+exec --no-startup-id feh --bg-scale $HOME/pics/rain.jpg
+exec --no-startup-id gnome-setings-daemon
